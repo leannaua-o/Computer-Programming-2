@@ -1,0 +1,31 @@
+//Create a C program that calculates the average of students' grades(five subjects)
+
+#include<stdio.h>
+
+int addGrades()
+{
+    int a,b,c,d,e;
+    int sum;
+    
+    printf("Enter student's grade: \n");
+    scanf("%d %d %d %d %d", &a,&b,&c,&d,&e);
+    
+    sum = a+b+c+d+e;
+    return sum;
+}
+
+int getAverage()
+{
+    float average;
+    int sum = addGrades();
+    
+    average = sum/5;
+    return average;
+}
+
+int main()
+{
+    float average = getAverage();
+    
+    printf("Average = %.2f", average);
+}
